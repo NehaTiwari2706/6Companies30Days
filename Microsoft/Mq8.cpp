@@ -1,5 +1,6 @@
 // LONGEST DVISIBLE SUBSET
 
+
 class Solution {
 public:
     vector<int> largestDivisibleSubset(vector<int>& nums) {
@@ -8,9 +9,11 @@ public:
         vector<int> ans;
         if(n==0)
             return ans;
-        
+        // sorting
         sort(nums.begin(),nums.end());
         int max = 1;
+
+        // Applying dp
         vector<int> dp(n+1,1);
         for(int i=1;i<n;++i)
         {
@@ -24,6 +27,7 @@ public:
                 }
             }
         }
+        //Finding subset
         //Now push the answer LIS
         int prev = -1;
         for(int i=n-1;i>=0;i--)
@@ -38,3 +42,6 @@ public:
         return ans;
     }
 };
+
+// Time Complexity = O(nlogn) + O(n2) + O(n) ~ O(n2)
+// Space Complexity = O(n)
