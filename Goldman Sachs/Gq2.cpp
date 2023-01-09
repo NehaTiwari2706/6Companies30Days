@@ -1,4 +1,5 @@
 /*
+VAID SQUARE
 Calculate the distance between points p1 p2, p1 p3, p1 p4, p2 p3, p2 p4 and p3 p4.
 then using unordered map count the no. of values of equal sides and diagonals and if the count of any side's vaue is 4 and diagonal's value is 2 then Its a valid Square return true else false.
 
